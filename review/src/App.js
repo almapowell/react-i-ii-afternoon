@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './App.css'
 import Header from './Header'
 import Body from './Body'
+import data from './data'
 
 export default class App extends Component {
 
@@ -12,7 +13,7 @@ export default class App extends Component {
             <div>
 
             <Header/>
-            <Body />
+            <Body data={data}/>
             </div>
         )
     }
