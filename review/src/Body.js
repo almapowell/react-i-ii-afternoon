@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import data from './data'
 import Info from './Info';
 
 export default class Body extends Component {
@@ -13,13 +12,14 @@ export default class Body extends Component {
 
     handlePrevious=()=>{
         if(this.state.index>0){
-            this.setState({this.state.index-1})
+            this.setState({index: this.state.index-1})
         }
     }
 
     handleNext=()=>{
-        if(this.state.index<this.state.index.length-1){
-            this.setState({this.state.index+1})
+        console.log(this.props.data.length, this.props.data.length-1)
+        if(this.state.index<this.props.data.length-1){
+            this.setState({index: this.state.index+1})
         }
     }
 
@@ -48,7 +48,7 @@ export default class Body extends Component {
     })
         return(
             <div className="body">
-                {employees{this.state.index}}
+                {employees[this.state.index]}
                 <Info handlePrevious={this.handlePrevious} handleNext={this.handleNext}/>
             </div>
         )

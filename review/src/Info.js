@@ -6,6 +6,7 @@ export default class Info extends Component {
 
     }
     render() {
+        console.log(this.props)
         return(
             <div>
                 <button onClick={this.props.handlePrevious}>Previous</button>
